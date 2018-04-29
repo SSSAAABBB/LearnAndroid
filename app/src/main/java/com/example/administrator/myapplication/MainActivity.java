@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         menu.setShadowWidthRes(R.dimen.shadow_width);
 //        menu.setShadowDrawable(R.drawable.shadow);
-
+        menu.setShadowDrawable(R.color.colorAccent);
         // 设置滑动菜单视图的宽度
         menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         // 设置渐入渐出效果的值
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
         //为侧滑菜单设置布局
         menu.setMenu(R.layout.layout_left_menu);
+
+
 
 
 
