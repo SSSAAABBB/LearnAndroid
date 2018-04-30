@@ -1,12 +1,24 @@
 package com.example.administrator.myapplication;
 
+import android.graphics.Color;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.makeramen.roundedimageview.RoundedImageView;
+
+import java.io.IOException;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +66,21 @@ public class MainActivity extends AppCompatActivity {
         //为侧滑菜单设置布局
         menu.setMenu(R.layout.layout_left_menu);
 
+      GetExample example=new GetExample();
+        String response= null;
+        try {
+            if ( example.run("https://raw.github.com/square/okhttp/master/README.md")!=null)
+            {
+                Toast.makeText(this, "hello", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+//        TextView textView=findViewById(R.id.text11);
+//        textView.setText(response);
+
 
 
 
@@ -63,3 +90,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+
