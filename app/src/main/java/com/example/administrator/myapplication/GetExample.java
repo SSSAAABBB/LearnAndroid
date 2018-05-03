@@ -1,7 +1,5 @@
 package com.example.administrator.myapplication;
 
-
-
 import java.io.IOException;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

@@ -6,4 +6,7 @@
     <string name="myinformation" />
     <string name="collect" />
     <string name="ue4" />
+    <string name="registe">registe</string>
+    <string name="login">login</string>
+    <string name="github">github</string>
 </resources>
